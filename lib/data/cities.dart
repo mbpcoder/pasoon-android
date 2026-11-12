@@ -1,0 +1,37 @@
+import '../models/city.dart';
+
+const String defaultCityId = 'tehran';
+
+const List<City> cities = [
+  City(id: 'tehran', name: 'تهران', latitude: 35.6892, longitude: 51.3890),
+  City(id: 'mashhad', name: 'مشهد', latitude: 36.2605, longitude: 59.6168),
+  City(id: 'isfahan', name: 'اصفهان', latitude: 32.6546, longitude: 51.6680),
+  City(id: 'karaj', name: 'کرج', latitude: 35.8400, longitude: 50.9391),
+  City(id: 'shiraz', name: 'شیراز', latitude: 29.5918, longitude: 52.5837),
+  City(id: 'tabriz', name: 'تبریز', latitude: 38.0800, longitude: 46.2919),
+  City(id: 'qom', name: 'قم', latitude: 34.6399, longitude: 50.8759),
+  City(id: 'ahvaz', name: 'اهواز', latitude: 31.3183, longitude: 48.6706),
+  City(id: 'kermanshah', name: 'کرمانشاه', latitude: 34.3142, longitude: 47.0650),
+  City(id: 'urmia', name: 'ارومیه', latitude: 37.5527, longitude: 45.0761),
+  City(id: 'rasht', name: 'رشت', latitude: 37.2808, longitude: 49.5832),
+  City(id: 'zahedan', name: 'زاهدان', latitude: 29.4963, longitude: 60.8629),
+  City(id: 'hamadan', name: 'همدان', latitude: 34.7983, longitude: 48.5148),
+  City(id: 'kerman', name: 'کرمان', latitude: 30.2839, longitude: 57.0834),
+  City(id: 'yazd', name: 'یزد', latitude: 31.8974, longitude: 54.3569),
+  City(id: 'ardabil', name: 'اردبیل', latitude: 38.2498, longitude: 48.2933),
+  City(id: 'bandar_abbas', name: 'بندرعباس', latitude: 27.1832, longitude: 56.2666),
+  City(id: 'arak', name: 'اراک', latitude: 34.0954, longitude: 49.7013),
+  City(id: 'zanjan', name: 'زنجان', latitude: 36.6736, longitude: 48.4787),
+  City(id: 'sanandaj', name: 'سنندج', latitude: 35.3219, longitude: 46.9862),
+  City(id: 'qazvin', name: 'قزوین', latitude: 36.2797, longitude: 50.0049),
+  City(id: 'khorramabad', name: 'خرم‌آباد', latitude: 33.4878, longitude: 48.3558),
+  City(id: 'gorgan', name: 'گرگان', latitude: 36.8456, longitude: 54.4393),
+  City(id: 'sari', name: 'ساری', latitude: 36.5633, longitude: 53.0601),
+  City(id: 'bushehr', name: 'بوشهر', latitude: 28.9234, longitude: 50.8203),
+  City(id: 'birjand', name: 'بیرجند', latitude: 32.8649, longitude: 59.2262),
+  City(id: 'ilam', name: 'ایلام', latitude: 33.6374, longitude: 46.4227),
+  City(id: 'shahrekord', name: 'شهرکرد', latitude: 32.3256, longitude: 50.8644),
+  City(id: 'yasuj', name: 'یاسوج', latitude: 30.6682, longitude: 51.5880),
+  City(id: 'semnan', name: 'سمنان', latitude: 35.5729, longitude: 53.3971),
+  City(id: 'bojnurd', name: 'بجنورد', latitude: 37.4747, longitude: 57.3290),
+];
