@@ -12,13 +12,14 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   final events = await EventRepository.open();
-  runApp(ProviderScope(
+  final container = ProviderContainer(
     overrides: [
       sharedPreferencesProvider.overrideWithValue(prefs),
       eventRepositoryProvider.overrideWithValue(events),
     ],
-    child: const PasoonApp(),
-  ));
+  );
+  runApp(UncontrolledProviderScope(container: container, child: const PasoonApp()));
+  container.read(todayNotificationServiceProvider).sync(container.read(cityProvider));
 }
 
 class PasoonApp extends StatelessWidget {

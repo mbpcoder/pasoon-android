@@ -8,6 +8,7 @@ import '../models/event.dart';
 import '../services/date_service.dart';
 import '../services/event_repository.dart';
 import '../services/owghat_service.dart';
+import '../services/today_notification_service.dart';
 
 final sharedPreferencesProvider = Provider<SharedPreferences>((ref) => throw UnimplementedError());
 
@@ -16,6 +17,9 @@ final eventRepositoryProvider = Provider<EventRepository>((ref) => throw Unimple
 final dateServiceProvider = Provider<DateService>((ref) => const DateService());
 
 final owghatServiceProvider = Provider<OwghatService>((ref) => const OwghatService());
+
+final todayNotificationServiceProvider =
+    Provider<TodayNotificationService>((ref) => const TodayNotificationService());
 
 class CityNotifier extends Notifier<City> {
   static const String _key = 'city_id';
@@ -29,6 +33,7 @@ class CityNotifier extends Notifier<City> {
   Future<void> select(City city) async {
     state = city;
     await ref.read(sharedPreferencesProvider).setString(_key, city.id);
+    await ref.read(todayNotificationServiceProvider).sync(city);
   }
 }
 
